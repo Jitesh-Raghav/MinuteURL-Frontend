@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MinuteURL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,25 +12,30 @@
         <div class="page1">
             <nav>
                 <div class="nav1">
-                    <h3 class="navh3">MinuteURL</h3>
+                    <h3 class="navh3"><i class="fa-solid fa-less-than-equal"></i>MinuteURL</h3>
                     <button class="nav1btn">beta</button>
                 </div>
                 <div class="nav2">
-                    <h3 class="navh3">Github</h3>
-                    <h3 class="navh3">Search</h3>
-                    <h3 class="navh3">Mode</h3>
-                    <button >Get Started</button>
+                    <!-- <h3 class="navh3"><i class="fa-brands fa-github"></i>Github</h3> -->
+                    <a href="https://github.com/Jitesh-Raghav/MinuteURL-Backend" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <!-- <h3 class="navh3">Search</h3> -->
+                    <!-- <h3 class="navh3">Mode</h3> -->
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                    <button >Get Started <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </nav>
 
             <div class="betanav">
-               <h4 class="navh4">Welcome to the MinuteURL beta. If you detect any problem or bug, feel free to <span>create an issue</span> on Github.</h4>
+               <h4 class="navh4">Welcome to the MinuteURL beta. If you detect any problem or bug, feel free to <a href="https://github.com/Jitesh-Raghav/MinuteURL-Backend/issues" target="_blank"><span>create an issue</span></a> on Github.</h4>
             </div>
             <div class="content">
                 <div>
-                    <h1>Shorten your <span class="highlight">loooong</span> URLs like never before</h1>
+                    <h1 class="animated-h1">Shorten your <span class="highlight">loooong</span> URLs like never before</h1>
                     <!-- <p>MinuteURL is an open-source platform that allows you to create, manage, and share short links with ease. <br> It's fast, secure, and easy to use.</p> -->
-                    <p>Copy your boring URL. Paste it below, then boooom! You got it, right?</p>
+                    <p class="animated-p">Copy your boring URL. Paste it below, then boooom! You got it, right?</p>
                 </div> 
             </div>
 
@@ -40,19 +46,38 @@
                 </div>
             </form>
 
-            <span id="copyMessage" style="display:none; color: rgba(0, 162, 0, 0.844); margin-left: 43%; margin-top: 15px; padding: 5px; font-style: italic;">URL copied to Clipboard!</span>
+            <span id="copyMessage" style="display:none; color: rgba(0, 162, 0, 0.844); margin-left: 43%; margin-top: 15px; padding: 5px; font-style:italic; font-weight: 600;">Link copied to Clipboard!</span>
 
             <div id="shortUrlContainer"></div>
+            
+
+            <div class="shortBtn">
+                <button class="btnLink1"><i class="fa-solid fa-code-pull-request"></i>Contribute to Project</button>
+                <button class="btnLink"><a href="https://github.com/Jitesh-Raghav/MinuteURL-Backend"><i class="fa-regular fa-star"></i>Star on Github</a></button>
+            </div>
+
+            <div class="joinDiscord">
+                <i class="fa-brands fa-discord"></i>
+                <p>Having issues with MinuteURL? Have a feature suggestion? wanna help out? <br/>
+                    <span>Come join our discord server and let us know!</span></p>
+                <button class="join">Join our Server</button>    
+            </div>
+
+
+
+
+            <div class="manager">
+                <h1>URL Manager Vault</h1>
+            </div>
+
+            <div id="pastUrlsContainer" class="url-table"></div>
 
             
-            
-            <div class="shortBtn">
-                <button class="btnLink1">Shorten a Link</button>
-                <button class="btnLink">Star on Github</button>
-            </div>
+
             <div class="Footer">
-                <p>Copyright © 2024 Jitesh Raghav. All Rights Reserved.</p>
-                <p>Socials LinkTree</p>
+                <p><i class="fa-regular fa-keyboard"></i>Crafted while overthing by<br>
+                Jitesh-Raghav and chat-GPT.</p>
+                <p>Socials LinkTree <i class="fa-solid fa-globe"></i></p>
             </div>
         </div>
         

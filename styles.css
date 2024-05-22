@@ -1,4 +1,9 @@
 
+@font-face {
+    font-family: offBit;
+    src: url(./OffBitTrial-DotBold.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -71,6 +76,7 @@ nav{
 }
 
 .nav2{
+height: 10vh;
 display: flex;
 align-items: center;
 justify-content: space-around;
@@ -85,6 +91,7 @@ margin: 1vh 6vh;
     color: white;
     font-weight: 550;
     font-size: 1.9vh;
+    margin: 2vh;
 }
 
 .nav2 button:hover{
@@ -109,6 +116,11 @@ margin: 1vh 6vh;
     text-decoration: underline;
     text-decoration-style: dotted;
     text-underline-offset: 4px;
+    
+}
+.navh4 a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .content {
@@ -132,6 +144,7 @@ h1 .highlight {
     font-size: 7vh;
     color: white;
     z-index: 12;
+    /* font-family: offBit; */
 }
 
 .content p{
@@ -152,7 +165,7 @@ h1 .highlight {
 }
 
 .url-text {
-    padding: 20px;
+    padding: 21px;
     width: 450px;
     border: 1px solid #7575753b;
     border-top-left-radius: 10px;
@@ -202,7 +215,7 @@ h1 .highlight {
 }
 
 .shortBtn{
-    margin: 3vh 1vh;
+    margin: 2vh 1vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,6 +239,10 @@ h1 .highlight {
     cursor: pointer;
     transition: all ease 0.2s;
     color: rgba(0, 100, 251, 0.815);
+}
+.btnLink a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .btnLink1{
@@ -252,12 +269,19 @@ h1 .highlight {
     justify-content: space-between;
     height: 30vh;
     width: 100%;
-    color: #171717;
+    background-color: #0c0c0c;
+    color: #616060;
+    /* border-radius: 50px;
+    border: 1px solid rgba(0, 94, 255, 0.589); */
 }
 
 .Footer p{
     color: rgba(180, 180, 180, 0.838);
     margin: 3vw;
+    /* font-family: offBit; */
+    font-weight: 500;
+    font-size: 2rem;
+    font-family: offBit;
 }
 
 /* Ensure you include previous styles */
@@ -265,26 +289,34 @@ h1 .highlight {
 #shortUrlContainer {
     height: 30%;
     width: 40%;
-    display: none;
+    display: flex;
     align-items: end;
     justify-content: center;
-    padding: 15px 5px;
+    padding: 20px 10px;
     margin-top: 20px;
     margin-left: 460px;
     font-size: 16px;
-    color: #afafaf;
-    background-color: #8d8d8d1a;
+    color: #d6d3d3;
+    background-color: #08080863;
     border-radius: 15px;
     z-index: 15;
     position: relative;
     line-height: 2rem;
+    opacity: 0; /* Initial state: invisible */
+    transform: translateY(20px); /* Initial state: slightly off-screen */
+    transition: opacity 0.3s ease, transform 0.4s ease; /* Smooth transition */
+}
+
+#shortUrlContainer.show {
+    opacity: 1; /* Final state: visible */
+    transform: translateY(0); /* Final state: in place */
 }
 
 #shortUrlContainer a {
-    color: rgb(0, 125, 251);
+    color: rgb(0, 121, 251);
     text-decoration: underline;
     font-size: 17px;
-    background-color: #37363672;
+    /* background-color: #37363672; */
     padding: 2px;
     border-radius: 5px;
 }
@@ -292,10 +324,14 @@ h1 .highlight {
     cursor: pointer;
 }
 
+#shortUrlContainer span{
+    font-weight: 500;
+}
+
 #copyButton {
     margin: 5px 5px 3px 10px;
     padding: 5px 15px;
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
     border: none;
     background-color: #1eff0087; /* Green */
@@ -329,8 +365,209 @@ h1 .highlight {
     color: rgba(255, 255, 255, 0.712);
     border: none;
     margin: 5px 5px 3px 7px;
+    font-size: 16px;
 }
 #qrCodeButton:hover{
     color: white;
     background-color: rgb(20, 134, 255);
 }
+
+/* Define the animation */
+@keyframes slideInFromCenter {
+    from {
+        transform: translate(0, 20%);
+        opacity: 0.2;
+    }
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the h1 tag */
+.animated-h1 {
+    position: relative;
+    animation: slideInFromCenter 0.3s ease-out forwards;
+    opacity: 0; /* Ensure it starts from invisible */
+}
+
+/* Define the animation */
+@keyframes slideInFromBottom {
+    from {
+        transform: translate(0, -30%);
+        opacity: 0.2;
+    }
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the h1 tag */
+.animated-p {
+    position: relative;
+    animation: slideInFromCenter 0.5s ease-out forwards;
+    opacity: 0; /* Ensure it starts from invisible */
+}
+
+.fa-github{
+    color: white;
+    font-size: 3vh;
+    margin: 2vh;
+}
+
+.fa-github:hover{
+    color: rgba(0, 94, 255, 0.738);
+    cursor: pointer;
+}
+
+.fa-magnifying-glass{
+    color: white;
+    font-size: 3vh;
+    margin: 2vh;
+}
+
+.fa-magnifying-glass:hover{
+    color: rgba(0, 94, 255, 0.738);
+    cursor: pointer;
+}
+
+.fa-circle-half-stroke{
+    color: white;
+    font-size: 3vh;
+    margin: 2vh;
+}
+
+.fa-circle-half-stroke:hover{
+    color: rgba(0, 94, 255, 0.738);
+    cursor: pointer;
+}
+
+.joinDiscord{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 20;
+    background-color: #08080863;
+    border-radius: 20px;
+    padding: 4vh;
+    margin-left: 310px;
+    margin-top: 14vh;
+}
+.fa-discord{
+    color: white;
+    font-size: 6vh;
+    margin: 3vh;
+}
+
+.joinDiscord p{
+    font-family: offBit;
+    color: #b0adad;
+    font-size: 1.3rem;
+    margin-left: 3vh;
+}
+.joinDiscord span{
+    color:#b0adad;
+    font-size: 1rem;
+}
+.join{
+    border-radius: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 3vh 5vh;
+    color: #ffffff;
+    white-space: nowrap;
+    background-color: rgba(7, 237, 7, 0.771);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 3vh;
+    font-weight: 600;
+}
+
+.manager{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 4vh;
+  margin-top: 14vh;
+}
+
+.manager h1{
+    color: white;
+    margin-bottom: 3vh;
+    /* font-family: offBit; */
+}
+
+.pastUrlsContainer{
+    background-color: #191919a7;
+    white-space: nowrap;
+    margin-left: 6vh;
+}
+
+.url-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.url-table th, .url-table td {
+    border: 1px solid #45454522;
+    padding: 20px 15px;
+    color: rgb(182, 180, 180);
+    text-align: left;
+    font-weight: 350;
+}
+
+.url-table th {
+    background-color: #183b6e;
+    text-align: left;
+}
+table a {
+    text-decoration: none;
+    color: inherit; /* Optional: Resetting the color to inherit */
+}
+
+.url-table {
+    width: 98%; /* Decrease width to 80% */
+    border-collapse: collapse; /* Collapse borders */
+    border-radius: 20px; /* Add border radius */
+    overflow: hidden; /* Hide overflow content */
+    margin-left:10px;
+    position: relative;
+    z-index: 20;
+    margin-bottom: 5vh;
+    border-spacing: 0 10px; /* Adds vertical space between rows */
+    background: linear-gradient(to right, transparent, rgba(0, 115, 255, 0.084)); /* Blue hue on the right */
+}
+
+.fa-arrow-right{
+    margin: 5px;
+}
+.fa-globe{
+    margin: 5px;
+    color: #2c81ff;
+}
+.fa-keyboard{
+    margin: 5px;
+    color: #2c81ff;
+}
+
+.fa-star{
+    margin: 5px; 
+}
+.fa-code-pull-request{
+    margin: 5px;
+}
+
+
+.fa-less-than-equal{
+    margin: 3px;
+    color: #2c81ff;
+}
+
+
+
+
+

@@ -4,3 +4,4 @@ qr code button to show qr code
 copied to clipboard message
 add icons
 add create issue link
+shundo fonts
