@@ -1,0 +1,6 @@
+error message if something goes wrong
+url copy button
+qr code button to show qr code
+copied to clipboard message
+add icons
+add create issue link

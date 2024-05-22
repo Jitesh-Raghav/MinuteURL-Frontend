@@ -1,0 +1,336 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    width: 100%;
+    background: #171717; /* Dark grey background */
+    position: relative;
+}
+
+.page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #171717;
+    /* position: relative; */
+    padding: 0 0vw;
+    
+}
+
+nav{
+    height: 10vh;
+    width: 100%;
+    background-color: #171717;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+    border-bottom: 1px solid rgba(69, 68, 68, 0.347);
+}
+
+.betanav{
+    height: 7vh;
+    width: 100%;
+    background-color: #171717;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+    border-bottom: 1px solid rgba(69, 68, 68, 0.347);
+}
+
+.nav1{
+    margin: 1vh 6vh;
+    display: flex;
+}
+
+.nav1btn{
+   background-color:  transparent;
+   color: rgba(255, 255, 255, 0.99);
+  border-radius: 10px;
+  padding: 0vh 1vh;
+  border: 1px solid rgba(75, 73, 73, 0.384);
+}
+
+.nav1btn:hover{
+    color: #716e6e;
+    transition: all ease 0.2s;
+}
+
+.nav2{
+display: flex;
+align-items: center;
+justify-content: space-around;
+margin: 1vh 6vh;
+}
+
+.nav2 button{
+    padding: 1.5vh 3.5vh;
+    border: 1px solid rgba(58, 55, 55, 0.452);
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    font-weight: 550;
+    font-size: 1.9vh;
+}
+
+.nav2 button:hover{
+    background: rgba(58, 55, 55, 0.452);
+    cursor: pointer;
+    transition: all ease 0.2s;
+    color: rgba(0, 100, 251, 0.815);
+}
+
+.navh3{
+    color: white;
+    margin: 1vh 1.5vh;
+}
+.navh4{
+    color: white;
+    margin: 1vh 8vh;
+    font-weight: 300;
+}
+
+.navh4 span{
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 4px;
+}
+
+.content {
+    min-height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    padding: 20px;
+    background: transparent; /* Make background transparent */
+    border-radius: 10px;
+    position: relative;
+    z-index: 10; /* Ensures content is above the grid background */
+}
+
+h1 .highlight {
+    color:rgb(0, 100, 251) /* Color for "loooong" */
+}
+
+.content h1{
+    font-size: 7vh;
+    color: white;
+    z-index: 12;
+}
+
+.content p{
+    color: white;
+    font-weight: 450;
+    font-size: 2.5vh;
+    margin-top: 3.5vh;
+}
+
+.url-input {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5px;
+    position: relative;
+    z-index: 15;
+}
+
+.url-text {
+    padding: 20px;
+    width: 450px;
+    border: 1px solid #7575753b;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+    background-color:#05050540;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.url-text:focus {
+    border-color: #007bffa3; /* Change border color to blue when focused */
+}
+
+.shorten-btn {
+    padding: 21px 30px;
+    background-color:  rgba(0, 100, 251, 0.815);
+    border: none;
+    border-radius: 0 10px 10px 0;
+    color: #ffffff;
+    cursor: pointer;
+    /* margin-left: 40px; */
+    /* border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; */
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.shorten-btn:hover{
+    background-color: rgba(0, 102, 255, 0.481) ;
+    transition: all ease 0.2s;
+}
+/* Create the grid background */
+.main::before {
+    content: "";
+    position: absolute;
+    top: 17vh;
+    left: 0;
+    width: 100%;
+    height: 78%;
+    background-image: linear-gradient(to right, #31303034 1px, transparent 1px),
+                      linear-gradient(to bottom,#31303034 1px, transparent 1px);
+    background-size: 16px 28px; /* Adjust the size to make squares larger or smaller */
+    z-index: 0; /* Ensures grid is behind the content */
+}
+
+.shortBtn{
+    margin: 3vh 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.btnLink{
+    border-radius: 10px;
+    padding: 2vh 3vh;
+    margin: 0vh 1vh;
+    background: transparent;
+    border: 1px solid rgba(58, 55, 55, 0.452);
+    color: white;
+    font-size: 2vh;
+    font-weight: 450;
+}
+
+.btnLink:hover{
+    background: rgba(58, 55, 55, 0.452);
+    cursor: pointer;
+    transition: all ease 0.2s;
+    color: rgba(0, 100, 251, 0.815);
+}
+
+.btnLink1{
+    border-radius: 10px;
+    padding: 2vh 3vh;
+    margin: 0vh 1vh;
+    background: rgba(58, 55, 55, 0.452);
+    border: 1px solid rgba(58, 55, 55, 0.452);
+    color: white;
+    font-size: 2vh;
+    font-weight: 450;
+}
+
+.btnLink1:hover{
+    background: rgba(90, 85, 85, 0.356);
+    cursor: pointer;
+    transition: all ease 0.2s;
+    color: rgba(0, 100, 251, 0.815);
+}
+
+.Footer{
+    align-items: end;
+    display: flex;
+    justify-content: space-between;
+    height: 30vh;
+    width: 100%;
+    color: #171717;
+}
+
+.Footer p{
+    color: rgba(180, 180, 180, 0.838);
+    margin: 3vw;
+}
+
+/* Ensure you include previous styles */
+
+#shortUrlContainer {
+    height: 30%;
+    width: 40%;
+    display: none;
+    align-items: end;
+    justify-content: center;
+    padding: 15px 5px;
+    margin-top: 20px;
+    margin-left: 460px;
+    font-size: 16px;
+    color: #afafaf;
+    background-color: #8d8d8d1a;
+    border-radius: 15px;
+    z-index: 15;
+    position: relative;
+    line-height: 2rem;
+}
+
+#shortUrlContainer a {
+    color: rgb(0, 125, 251);
+    text-decoration: underline;
+    font-size: 17px;
+    background-color: #37363672;
+    padding: 2px;
+    border-radius: 5px;
+}
+#shortUrlContainer a:hover{
+    cursor: pointer;
+}
+
+#copyButton {
+    margin: 5px 5px 3px 10px;
+    padding: 5px 15px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    background-color: #1eff0087; /* Green */
+    color:  rgba(255, 255, 255, 0.718);
+    border-radius: 10px;
+
+}
+
+#copyButton:hover {
+    background-color: #1eff00a4;
+    color: white;
+}
+
+#copyMessageContainer {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Ensure it appears above other elements */
+}
+
+#qrCodeButton{
+    background: rgba(20, 134, 255, 0.912);
+    padding: 4px 22px;
+    position: relative;
+    z-index: 16;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.712);
+    border: none;
+    margin: 5px 5px 3px 7px;
+}
+#qrCodeButton:hover{
+    color: white;
+    background-color: rgb(20, 134, 255);
+}

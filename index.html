@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinuteURL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        <div class="page1">
+            <nav>
+                <div class="nav1">
+                    <h3 class="navh3">MinuteURL</h3>
+                    <button class="nav1btn">beta</button>
+                </div>
+                <div class="nav2">
+                    <h3 class="navh3">Github</h3>
+                    <h3 class="navh3">Search</h3>
+                    <h3 class="navh3">Mode</h3>
+                    <button >Get Started</button>
+                </div>
+            </nav>
+
+            <div class="betanav">
+               <h4 class="navh4">Welcome to the MinuteURL beta. If you detect any problem or bug, feel free to <span>create an issue</span> on Github.</h4>
+            </div>
+            <div class="content">
+                <div>
+                    <h1>Shorten your <span class="highlight">loooong</span> URLs like never before</h1>
+                    <!-- <p>MinuteURL is an open-source platform that allows you to create, manage, and share short links with ease. <br> It's fast, secure, and easy to use.</p> -->
+                    <p>Copy your boring URL. Paste it below, then boooom! You got it, right?</p>
+                </div> 
+            </div>
+
+            <form id="urlForm">
+                <div class="url-input">
+                    <input type="text" placeholder="Your loooong URL here..." class="url-text" id="urlInput">
+                    <button type="submit" class="shorten-btn">Shorten URL</button>
+                </div>
+            </form>
+
+            <span id="copyMessage" style="display:none; color: rgba(0, 162, 0, 0.844); margin-left: 43%; margin-top: 15px; padding: 5px; font-style: italic;">URL copied to Clipboard!</span>
+
+            <div id="shortUrlContainer"></div>
+
+            
+            
+            <div class="shortBtn">
+                <button class="btnLink1">Shorten a Link</button>
+                <button class="btnLink">Star on Github</button>
+            </div>
+            <div class="Footer">
+                <p>Copyright © 2024 Jitesh Raghav. All Rights Reserved.</p>
+                <p>Socials LinkTree</p>
+            </div>
+        </div>
+        
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
