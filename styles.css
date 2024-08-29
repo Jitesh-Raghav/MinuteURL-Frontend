@@ -58,9 +58,49 @@ nav{
 }
 
 .nav1{
+    width: 20vw;
     margin: 1vh 6vh;
     display: flex;
+    flex-wrap: nowrap;
 }
+ @media (max-width:780px){
+    .nav1btn{
+        display: none;
+    }
+    .nav1{
+        flex-wrap: nowrap;
+    }
+    .nav2{
+        display: none;
+        flex-wrap: nowrap;
+    }
+    .fa-bars{
+        display:block;
+    }
+    .navbuttons{
+        display: none;
+    }
+    .betanav{
+        height: 8vmax;
+        padding: 2vh 0;
+    }
+ }
+
+ @media (max-width:400px){
+    .betanav{
+        height: 8vmax;
+        padding: 2vh 0;
+    }
+ }
+ 
+ .nav2{
+    flex-wrap: nowrap;
+ }
+
+ .fa-bars{
+    display: none;
+    color: white;
+ }
 
 .nav1btn{
    background-color:  transparent;
@@ -68,6 +108,7 @@ nav{
   border-radius: 10px;
   padding: 0vh 1vh;
   border: 1px solid rgba(75, 73, 73, 0.384);
+  font-size: 2vh;
 }
 
 .nav1btn:hover{
@@ -90,15 +131,16 @@ margin: 1vh 6vh;
     background-color: transparent;
     color: white;
     font-weight: 550;
-    font-size: 1.9vh;
+    font-size: 2vh;
     margin: 2vh;
+    white-space: nowrap;
 }
 
 .nav2 button:hover{
     background: rgba(58, 55, 55, 0.452);
     cursor: pointer;
     transition: all ease 0.2s;
-    color: rgba(0, 100, 251, 0.815);
+    color: rgb(47, 130, 255);
 }
 
 .navh3{
@@ -238,7 +280,7 @@ h1 .highlight {
     background: rgba(58, 55, 55, 0.452);
     cursor: pointer;
     transition: all ease 0.2s;
-    color: rgba(0, 100, 251, 0.815);
+    color: rgb(47, 130, 255);
 }
 .btnLink a{
     text-decoration: none;
@@ -255,25 +297,35 @@ h1 .highlight {
     font-size: 2vh;
     font-weight: 450;
 }
+.btnLink1 a{
+    text-decoration: none;
+    color: inherit;
+}
 
 .btnLink1:hover{
     background: rgba(90, 85, 85, 0.356);
     cursor: pointer;
     transition: all ease 0.2s;
-    color: rgba(0, 100, 251, 0.815);
+    color: rgb(47, 130, 255);
 }
 
 .Footer{
     align-items: end;
     display: flex;
     justify-content: space-between;
-    height: 30vh;
+    height: 40vh;
     width: 100%;
-    background-color: #0c0c0c;
+    /* background-color: #0c0c0c; */
     color: #616060;
     /* border-radius: 50px;
     border: 1px solid rgba(0, 94, 255, 0.589); */
+    /* filter: blur(1px); */
+    z-index: 15;
+    position: relative;
+    overflow: hidden;
+     background: linear-gradient(to bottom,#1515158b, rgb(0, 0, 0));
 }
+
 
 .Footer p{
     color: rgba(180, 180, 180, 0.838);
@@ -282,6 +334,13 @@ h1 .highlight {
     font-weight: 500;
     font-size: 2rem;
     font-family: offBit;
+    margin-bottom: 7vh;
+    cursor: pointer;
+}
+
+.Footer a{
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Ensure you include previous styles */
@@ -417,7 +476,7 @@ h1 .highlight {
 }
 
 .fa-github:hover{
-    color: rgba(0, 94, 255, 0.738);
+    color: rgb(47, 130, 255);
     cursor: pointer;
 }
 
@@ -428,7 +487,7 @@ h1 .highlight {
 }
 
 .fa-magnifying-glass:hover{
-    color: rgba(0, 94, 255, 0.738);
+    color: rgb(47, 130, 255);
     cursor: pointer;
 }
 
@@ -439,7 +498,7 @@ h1 .highlight {
 }
 
 .fa-circle-half-stroke:hover{
-    color: rgba(0, 94, 255, 0.738);
+    color: rgb(47, 130, 255);
     cursor: pointer;
 }
 
@@ -455,6 +514,8 @@ h1 .highlight {
     padding: 4vh;
     margin-left: 310px;
     margin-top: 14vh;
+    margin-bottom: 10vh;
+    /* background: linear-gradient(to right,rgba(14, 13, 13, 0.599), rgba(21, 20, 20, 0.79)); */
 }
 .fa-discord{
     color: white;
@@ -493,6 +554,14 @@ h1 .highlight {
   justify-content: flex-start;
   margin-left: 4vh;
   margin-top: 14vh;
+}
+.manager span{
+    color: #959393a7;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #183a6e3a;
+    border-radius: 5px;
+    padding: 3px;
 }
 
 .manager h1{
@@ -566,8 +635,98 @@ table a {
     margin: 3px;
     color: #2c81ff;
 }
+.fa-pagelines{
+    margin: 3px;
+}
 
+@media only screen and (max-width: 1200px) {
+    .nav2 button {
+        font-size: 1.7vh; /* Adjust font size for smaller screens */
+    }
 
+    .content h1 {
+        font-size: 4.5vh;
+    }
 
+    .content p {
+        font-size: 1.8vh;
+    }
 
+    .url-text {
+        width: 75%;
+    }
+
+    .shortBtn {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .btnLink, .btnLink1 {
+        width: 100%; /* Make buttons full width */
+        text-align: center; /* Center text inside buttons */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav1, .nav2 {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+    }
+
+    .nav2 button {
+        font-size: 1.5vh; /* Adjust font size for smaller screens */
+    }
+
+    .content h1 {
+        font-size: 4vh;
+    }
+
+    .content p {
+        font-size: 1.6vh;
+    }
+
+    .url-text {
+        width: 80%;
+    }
+
+    .shortBtn {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .btnLink, .btnLink1 {
+        width: 100%; /* Make buttons full width */
+        text-align: center; /* Center text inside buttons */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nav1, .nav2 {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+    }
+
+    .nav2 button {
+        font-size: 1.3vh; /* Adjust font size for smaller screens */
+    }
+
+    .content h1 {
+        font-size: 3.5vh;
+    }
+
+    .content p {
+        font-size: 1.4vh;
+    }
+
+    .url-text {
+        width: 85%;
+    }
+
+    .shortBtn {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .btnLink, .btnLink1 {
+        width: 100%; /* Make buttons full width */
+        text-align: center; /* Center text inside buttons */
+    }
+}
 

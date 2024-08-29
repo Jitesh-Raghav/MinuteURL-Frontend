@@ -5,3 +5,5 @@ copied to clipboard message
 add icons
 add create issue link
 shundo fonts
+
+see more url button
