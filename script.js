@@ -17,7 +17,7 @@ document.getElementById('urlForm').addEventListener('submit', function(event) {
     const urlInput = document.getElementById('urlInput').value;
 
     if (urlInput) {
-        fetch('http://localhost:8080/generate', {
+        fetch('http://localhost:8085/generate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ document.getElementById('urlForm').addEventListener('submit', function(event) {
 
 // Function to fetch all shortened URLs from the backend
 function fetchPastUrls() {
-    fetch('http://localhost:8080/getall')
+    fetch('http://localhost:8085/getall')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -74,7 +74,7 @@ function fetchPastUrls() {
                     <td>${url.creationDate}</td>
                     <td>${url.expirationDate}</td>
                     <td><a href="${url.originalUrl}" target="_blank">${url.originalUrl}</a></td>
-                    <td><a href="http://localhost:8080/${url.shortLink}" target="_blank">${url.shortLink}</a></td>
+                    <td><a href="http://localhost:8085/${url.shortLink}" target="_blank">${url.shortLink}</a></td>
                 `;
                 table.appendChild(row);
             });
@@ -110,13 +110,13 @@ function displayShortenedUrl(shortLink) {
     const shortUrlContainer = document.getElementById('shortUrlContainer');
     shortUrlContainer.style.display = 'flex'; // Show the container
     shortUrlContainer.innerHTML = `
-        <p><span>Shortened URL <span/><br/> Click to visit site: <a href="http://localhost:8080/${shortLink}" target="_blank">http://localhost:8080/${shortLink}</a></p>
+        <p><span>Shortened URL <span/><br/> Click to visit site: <a href="http://localhost:8085/${shortLink}" target="_blank">http://localhost:8085/${shortLink}</a></p>
         <button id="copyButton">Copy</button>
         <button id="qrCodeButton">QR</button>
     `;
 
     document.getElementById('copyButton').addEventListener('click', function() {
-        copyToClipboard(`http://localhost:8080/${shortLink}`);
+        copyToClipboard(`http://localhost:8085/${shortLink}`);
     });
 
     document.getElementById('qrCodeButton').addEventListener('click', function() {
