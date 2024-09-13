@@ -74,7 +74,7 @@ function fetchPastUrls() {
                     <td>${url.creationDate}</td>
                     <td>${url.expirationDate}</td>
                     <td><a href="${url.originalUrl}" target="_blank">${url.originalUrl}</a></td>
-                    <td><a href="http://localhost:8085/${url.shortLink}" target="_blank">${url.shortLink}</a></td>
+                    <td><a href="https://minute-url.vercel.app/${url.shortLink}" target="_blank">${url.shortLink}</a></td>
                 `;
                 table.appendChild(row);
             });
@@ -110,7 +110,7 @@ function displayShortenedUrl(shortLink) {
     const shortUrlContainer = document.getElementById('shortUrlContainer');
     shortUrlContainer.style.display = 'flex'; // Show the container
     shortUrlContainer.innerHTML = `
-        <p><span>Shortened URL <span/><br/> Click to visit site: <a href="http://localhost:8085/${shortLink}" target="_blank">http://localhost:8085/${shortLink}</a></p>
+        <p><span>Shortened URL <span/><br/> Click to visit site: <a href="http://localhost:8085/${shortLink}" target="_blank">minute-url./${shortLink}</a></p>
         <button id="copyButton">Copy</button>
         <button id="qrCodeButton">QR</button>
     `;
